@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate Download – Akola Police</title>
+  <meta name="description" content="Download your Akola Police Run for Unity participation certificate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Mukta:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Particle Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Floating Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  <div class="orb orb-5"></div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Success Toast -->
+  <div class="success-toast" id="successToast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+      <polyline points="22 4 12 14.01 9 11.01" />
+    </svg>
+    <span>Certificate downloaded successfully!</span>
+  </div>
+
+  <!-- Live Counter Badge -->
+  <div class="counter-badge">
+    <div class="counter-badge-label">Total Downloads</div>
+    <div class="counter-badge-number" id="liveCount">0</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- CERTIFICATE DASHBOARD -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <main class="dashboard">
+
+    <!-- Card -->
+    <div class="card">
+
+      <!-- Corner Accents -->
+      <div class="corner-accent top-left"></div>
+      <div class="corner-accent top-right"></div>
+      <div class="corner-accent bottom-left"></div>
+      <div class="corner-accent bottom-right"></div>
+
+      <!-- Header with logos -->
+      <div class="card-header">
+        <img src="./AkolaPolice Logo.png" alt="Akola Police" class="logo" />
+        <div class="header-center">
+          <h1 class="brand-title">Akola Police</h1>
+          <p class="brand-sub">Mission Udaan</p>
+        </div>
+        <img src="./WhatsApp_Image_2025-10-29_at_2.16.15_PM-removebg-preview.png" alt="Event Logo" class="logo" />
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"><span class="divider-diamond">◆</span></div>
+
+      <!-- Campaign info -->
+      <h2 class="campaign-title">अकोला पोलीस मिशन उडान कायदेविषयक जनजागृती अभियान</h2>
+      <p class="subtitle">Enter your full name below to download your certificate of completion.</p>
+
+      <!-- Input -->
+      <div class="input-wrapper">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <input type="text" id="username" placeholder="Enter your full name ..." />
+      </div>
+
+      <!-- Download Button -->
+      <button class="btn-download" id="downloadBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        <span style="position:relative;z-index:1">Download Certificate</span>
+      </button>
+
+
+      <!-- Footer -->
+      <p class="powered-by">Powered by Akola District Police</p>
+    </div>
+
+  </main>
+
+  <!-- Hidden canvas for certificate generation -->
+  <canvas id="certificateCanvas" width="1123" height="794" style="display: none"></canvas>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

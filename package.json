@@ -1,0 +1,14 @@
+{
+  "name": "certificate-dashboard",
+  "version": "1.0.0",
+  "description": "Akola Police Certificate Download Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "ua-parser-js": "^1.0.38"
+  }
+}
